@@ -29,16 +29,16 @@ spec:
               cpu: 50m
               memory: 50Mi
           ports:
-            - containerPort: 3001
+            - containerPort: 3000
           startupProbe:
             tcpSocket:
-              port: 3001
+              port: 3000
             initialDelaySeconds: 10
             periodSeconds: 5
             failureThreshold: 30
           readinessProbe:
             tcpSocket:
-              port: 3001
+              port: 3000
             initialDelaySeconds: 5
             periodSeconds: 5
       imagePullSecrets:
